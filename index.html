@@ -17,8 +17,30 @@
 
   <div class="container"></div>
 
+  <script type="text/template" id="login-template">
+    <form class="login-form">
+        <h3>Log In</h3>
+        <div class="error" style="display:none"></div>
+        <h4>Please enter your username</h4>
+        <input type="text" id="login-username" placeholder="Username" />
+        <h4>Please enter your password</h4>
+        <input type="password" id="login-password" placeholder="Password" />
+        <button>Login</button>
+    </form>
+    <form class="signup-form">
+        <h3>Sign Up</h3>
+        <div class="error" style="display:none"></div>
+        <h4>Please enter your desired username</h4>
+        <input type="text" id="signup-username" placeholder="Username" />
+        <h4>Please enter your desired password</h4>
+        <input type="password" id="signup-password" placeholder="Password" />
+        <button>Register</button>
+    </form>
+  </script>
+
   <script type="text/template" id="home">
   <h1> CIS Website</h1>
+  <button class="log-out">Log Out</button>
   <header>
     	<nav>
     		<a href="#">Home</a>
@@ -54,16 +76,16 @@
     	</nav>
     </header>
     <section>
-    	<a href="">a1</a>
-    	<a href="">a2</a>
-    	<a href="">a3</a>
-    	<a href="">a4</a>
-    	<a href="">a5</a>
-    	<a href="">a6</a>
-    	<a href="">a7</a>
-    	<a href="">a8</a>
-    	<a href="">a9</a>
-     	<a href="">a10</a>
+    	<a href="#/assignments/a1">a1</a>
+    	<a href="#/assignments/a2">a2</a>
+    	<a href="#/assignments/a3">a3</a>
+    	<a href="#/assignments/a4">a4</a>
+    	<a href="#/assignments/a5">a5</a>
+    	<a href="#/assignments/a6">a6</a>
+    	<a href="#/assignments/a7">a7</a>
+    	<a href="#/assignments/a8">a8</a>
+    	<a href="#/assignments/a9">a9</a>
+     	<a href="#/assignments/a10">a10</a>
     </section>
   </script>
 
@@ -79,17 +101,91 @@
     	</nav>
     </header>
     <section>
-    	<a href="">c1</a>
-    	<a href="">c2</a>
-    	<a href="">c3</a>
-    	<a href="">c4</a>
-    	<a href="">c5</a>
-    	<a href="">c6</a>
-    	<a href="">c7</a>
-    	<a href="">c8</a>
-    	<a href="">c9</a>
-     	<a href="">c10</a>
+    	<a href="#/writeups/c1">c1</a>
+    	<a href="#/writeups/c2">c2</a>
+    	<a href="#/writeups/c3">c3</a>
+    	<a href="#/writeups/c4">c4</a>
+    	<a href="#/writeups/c5">c5</a>
+    	<a href="#/writeups/c6">c6</a>
+    	<a href="#/writeups/c7">c7</a>
+    	<a href="#/writeups/c8">c8</a>
+    	<a href="#/writeups/c9">c9</a>
+     	<a href="#/writeups/c10">c10</a>
     </section>
+  </script>
+
+  <script type="text/template" id="a1">
+      <h1> CIS Website</h1>
+
+  <header>
+    	<nav>
+    		<a href="#">Home</a>
+    		<a href="#/assignments">Assignments</a>
+    		<a href="#/writeups">Write Ups</a>
+    		<a href="#/contact">Contact</a>
+    	</nav>
+    </header>
+    <section>
+    	<a href="#/assignments/a1">a1</a>
+    	<a href="#/assignments/a2">a2</a>
+    	<a href="#/assignments/a3">a3</a>
+    	<a href="#/assignments/a4">a4</a>
+    	<a href="#/assignments/a5">a5</a>
+    	<a href="#/assignments/a6">a6</a>
+    	<a href="#/assignments/a7">a7</a>
+    	<a href="#/assignments/a8">a8</a>
+    	<a href="#/assignments/a9">a9</a>
+     	<a href="#/assignments/a10">a10</a>
+    </section>
+
+    <p>maswhitaker.github.io/cis-class-website</p>
+  </script>
+
+  <script type="text/template" id="c1">
+      <h1> CIS Website</h1>
+
+  <header>
+    	<nav>
+    		<a href="#">Home</a>
+    		<a href="#/assignments">Assignments</a>
+    		<a href="#/writeups">Write Ups</a>
+    		<a href="#/contact">Contact</a>
+    	</nav>
+    </header>
+    <section>
+    	<a href="#/writeups/c1">c1</a>
+    	<a href="#/writeups/c2">c2</a>
+    	<a href="#/writeups/c3">c3</a>
+    	<a href="#/writeups/c4">c4</a>
+    	<a href="#/writeups/c5">c5</a>
+    	<a href="#/writeups/c6">c6</a>
+    	<a href="#/writeups/c7">c7</a>
+    	<a href="#/writeups/c8">c8</a>
+    	<a href="#/writeups/c9">c9</a>
+     	<a href="#/writeups/c10">c10</a>
+    </section>
+
+    <p>Ch 2 Group Case Write Up
+Mason Whitaker, Anton Ritchie, Sadie Adams
+Summary
+	This case started off with computer scientists’ desire to design and construct a computer-based information system, or CBIS, that possesses general problem-solving skills. From this desire, IBM’s Watson was created.
+	Watson is one of the first steps toward building a comprehensive CBIS. Watson was built to compete on the show Jeopardy! and had access to four terabytes of disk storage containing over two hundred million pages of content. Even though Watson had some minor difficulties on questions with short clues and only a few words, Watson easily outperformed the human opponents who had formerly won on the show. From the time of Watson’s Jeopardy! performance to March 2013, Watson’s capabilities had improved an astonishing two hundred and forty percent. IBM is now planning what they call a “Watson 2.0” which will be able to operate on smartphones and tablets.
+	Although Watson was developed specifically to compete on Jeopardy, IBM quickly began commercializing Watson. IBM turned to the medical field to further test out Watson’s capabilities and the results were impressive. IBM partnered with WellPoint, a company in the Blue Cross and Blue Shield association. Watson has since been able to increase efficiency within WellPoint and has been trained with thousands of test case scenarios and real-life cases. IBM made it clear that the objective was never to replace doctors with machines like Watson, but rather to help doctors make the most accurate decisions for their patients and limit medical errors by helping diagnose patients. 
+	Watson has since been implemented into other businesses and fields. Specifically, Watson has been used in Memorial Sloan-Kettering and Memorial Sloan-Kettering Cancer Center, Cleveland Clinic, MCCM, Westmed, Rensselaer, and Citigroup. Watson helps diagnose patients by cross checking their symptoms, medical history, and hereditary history with both structured and unstructured medical information. At Rensselaer, Watson helps researchers and students, while at Citigroup, Watson will be used for telecommunications, financial services, and government needs.
+1. Watson would have a variety of uses in a university setting. Due to Watson’s expansive access to information of all kinds, he could be useful in a library, either to help students locate exactly where a book they need is or to act as more of a direct encyclopedia for students. Watson could also be very useful in the accounts department of a university. Watson could keep records of all kinds of students who have paid, who need to pay, which ones get financial aid, and which ones have already received financial aid for the year. Watson could make human err between financial issues nearly nonexistent. Watson could also be very useful in seeing which students have taken repeat courses and in keeping records of what classes specific students still need. Watson could even be used to scan all of the course descriptions for transfer students or study abroad students to see which courses will transfer from foreign institutions and which classes in particular they would transfer into. Watson could be used in almost any aspect of a university setting and could be very helpful.
+
+2. One of the potential disadvantages of having Watson in the healthcare setting tis the lack of interaction with a personal physician.  Watson would not be able to look at your swollen ankle and tell you that you need to rest on it due to a sprain.  His limitation of only having the book knowledge would play a hampering in healthcare.  People need to feel that human interaction when they are dealing with physical ailments, they need to feel any form of consoling they receive.  Having a computer diagnose your problems by asking the general questions does not offer or provide that sense of care, especially since the diagnosis would be from a machine.
+Another disadvantage could be the possibility of misdiagnosis.  In the case of a swollen ankle, Watson could formulate a response based solely on the answers you provide.  Pain in your ankle could be a sprain of the joint, bruising of the bone, even a torn ligament, but without the human element, Watson will only be able to suggest what it was able to determine through its mass of readings.
+The last disadvantage Watson would have is the patient themselves.  A patient can come in and answer the questions given, but not be fully truthful in their responses, which could lead to more damage of whatever ailment they have.  With a physician, the patient would or could give off signs showing they are in more pain than they admit to, or even lying about the symptoms they are having, possibly to receive a prescription medication to abuse. 
+
+3.	I would not consider having a diagnosis coming only from Watson due to the fact Watson can only see what is reported or told to him, not actually see what the issue is.  I feel Watson would be very beneficial in terms dealing with cases of terminal or potential terminal diagnosis where the computer can look through a person’s health records, current body scans, even lineage, but to have Watson in a normal clinical setting, which IBM is attempting to do with Watson 2.0, the program could still misdiagnose a client.  If a patient comes into a clinic and complains of a rash that itches, Watson 2.0 wouldn’t be able to diagnose the rash to a specific virus or bacteria due to the vagueness of the topic.  Currently, any person can conduct a general search of symptoms on a website like WebMd and self-diagnose.  However, a doctor or nurse would physically be able to see the infected area and could immediately determine what the case might be.
+	Watson has and will continue to help physicians when it comes to determining a specific illness or what a patient’s joint pains could be from, but I do not believe Watson has the credentials to clinically diagnose a patient by itself at this time.  With more research and testing done with Watson though, there is always the possibility we will see Watson in hometown clinics the near future. I also believe that this applies to class in the topic of business process. Watson would have to be integrated into the diagnosing process instead of the having a physician diagnose.
+
+4.  Would you consider being diagnosed by your personal physician, if he or she consulted Watson? Why or why not?
+
+If my physician consulted Watson I would still be okay with him diagnosing me. This is because I believe that Watson carries an unlimited amount of information, which a normal physician would not have access to. A normal physician can not search through millions on millions of databases filled with information, but a physician who can use Watson’s information and transform it into knowledge for diagnoses. I think that this enables the physician to make the most educated decision for the diagnoses. They will be less likely to be wrong if they consult Watson, therefore I think that every physician should have access to IBM’s Watson.
+</p>
+<img src="images/powerpointt.png">
   </script>
 
 
