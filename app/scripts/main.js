@@ -73,6 +73,10 @@ var Router = Parse.Router.extend({
 	}
 });
 
+var approuter = new Router();
+
+Parse.history.start();
+
 
 
 
