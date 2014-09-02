@@ -12,3 +12,9 @@ body{
 a{
 	@include button(pill);
 }
+img{
+	width: 100%;
+}
+p{
+	font-size: .5em;
+}
