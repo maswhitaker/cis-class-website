@@ -18,3 +18,37 @@ img{
 p{
 	font-size: .5em;
 }
+#loginsignup{
+	@include outer-container;
+	color: white;
+	input{
+		color: black;
+		text-align: center;
+		border-radius: 20px;
+	}
+	button{
+		@include button(pill);
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
+}
+.login-form{
+	@include span-columns(5);
+	@include shift(.5);
+	background-color: red;
+	border-radius: 30px;
+	margin-top: 20px;
+}
+.signup-form{
+	background-color: red;
+	border-radius: 30px;
+	@include span-columns(5);
+	@include shift(.5);
+	margin-top: 20px;
+}
+.log-out{
+	position: absolute;
+		top: 10px;
+		right: 10px;
+		@include button(pill);
+}
