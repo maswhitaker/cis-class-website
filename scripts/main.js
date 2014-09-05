@@ -135,6 +135,17 @@ var LoginView = Parse.View.extend({
     }
 });
 
+var A2View = Parse.View.extend({
+	template: _.template($("#a2").html()),
+	initialize: function(){
+		this.render();
+		$(".container").html(this.el);
+	},
+	render: function(){
+		this.$el.html(this.template(this.model));
+	}
+});
+
 var Router = Parse.Router.extend({
 	routes: {
 		"": "home",
@@ -142,7 +153,8 @@ var Router = Parse.Router.extend({
 		"assignments": "assignments",
 		"writeups": "writeups",
 		"assignments/a1": "a1",
-		"writeups/c1": "c1"
+		"writeups/c1": "c1",
+		"assignments/a2": "a2"
 	},
 	home: function(){
 		if (Parse.User.current()) {
@@ -182,6 +194,13 @@ var Router = Parse.Router.extend({
 	c1: function(){
 		if (Parse.User.current()){
 			new C1View();
+		} else {
+			new LoginView();
+		}
+	},
+	a2: function(){
+		if (Parse.User.current()){
+			new A2View();
 		} else {
 			new LoginView();
 		}
