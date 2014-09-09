@@ -136,6 +136,14 @@ var LoginView = Parse.View.extend({
 });
 
 var A2View = Parse.View.extend({
+	events:{
+		"click #animation": "animate",
+		"click #submit": "submit"
+	},
+	animate: function(){
+		$("#animation").css("height", "150px");
+		$("#animation").css("width", "150px");
+	},
 	template: _.template($("#a2").html()),
 	initialize: function(){
 		this.render();
@@ -143,6 +151,9 @@ var A2View = Parse.View.extend({
 	},
 	render: function(){
 		this.$el.html(this.template(this.model));
+	},
+	submit: function(){
+		$("#comment-box").append($("#comment").val() + "<br/>");
 	}
 });
 

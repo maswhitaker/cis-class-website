@@ -52,3 +52,28 @@ p{
 		right: 10px;
 		@include button(pill);
 }
+#a2-form{
+	width: 50%;
+	font-family: Helvetica;
+	height: 300px;
+	color: white;
+	background-color: blue;
+	border-radius: 50px;
+	input{
+		margin-top: 20px;
+		color: black;
+		margin-bottom: 20px;
+	}
+	button{
+		@include button(shiny);
+	}
+}
+#animation {
+	height: 100px;
+	width: 100px;
+	background-color: white;
+	border-radius: 30px;
+	border: solid black 2px;
+	margin-right: auto;
+	margin-left: auto;
+}
