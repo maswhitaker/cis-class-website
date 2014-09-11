@@ -82,6 +82,17 @@ var C1View = Parse.View.extend({
 	}
 });
 
+var C2View = Parse.View.extend({
+	template: _.template($("#c2").html()),
+	initialize: function(){
+		this.render();
+		$(".container").html(this.el);
+	},
+	render: function(){
+		this.$el.html(this.template(this.model));
+	}
+});
+
 var LoginView = Parse.View.extend({
 	events:{
       "submit form.login-form": "logIn",
@@ -165,7 +176,8 @@ var Router = Parse.Router.extend({
 		"writeups": "writeups",
 		"assignments/a1": "a1",
 		"writeups/c1": "c1",
-		"assignments/a2": "a2"
+		"assignments/a2": "a2",
+		"writeups/c2": "c2"
 	},
 	home: function(){
 		if (Parse.User.current()) {
@@ -215,14 +227,16 @@ var Router = Parse.Router.extend({
 		} else {
 			new LoginView();
 		}
+	},
+	c2: function(){
+		if (Parse.User.current()){
+			new C2View();
+		} else {
+			new LoginView();
+		}
 	}
 });
 
 var approuter = new Router();
 
 Parse.history.start();
-
-
-
-
-
