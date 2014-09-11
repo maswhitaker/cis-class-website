@@ -9,7 +9,8 @@ var Router = Parse.Router.extend({
     "assignments/a1": "a1",
     "writeups/c1": "c1",
     "assignments/a2": "a2",
-    "writeups/c2": "c2"
+    "writeups/c2": "c2",
+    "writeups/c3": "c3"
   },
   home: function(){
     if (Parse.User.current()) {
@@ -63,6 +64,13 @@ var Router = Parse.Router.extend({
   c2: function(){
     if (Parse.User.current()){
       new C2View();
+    } else {
+      new LoginView();
+    }
+  },
+  c3: function(){
+    if (Parse.User.current()){
+      new C3View();
     } else {
       new LoginView();
     }

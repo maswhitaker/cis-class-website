@@ -34,3 +34,14 @@ var C2View = Parse.View.extend({
     this.$el.html(this.template(this.model));
   }
 });
+
+var C3View = Parse.View.extend({
+  template: _.template($("#c3").html()),
+  initialize: function(){
+    this.render();
+    $(".container").html(this.el);
+  },
+  render: function(){
+    this.$el.html(this.template(this.model));
+  }
+});
